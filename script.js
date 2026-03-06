@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initNavbarScroll();
     initAnimations();
+    initLightbox();
 });
 
 /**
@@ -238,4 +239,65 @@ function showError(input, message) {
 */
 
 console.log('Portfolio website loaded successfully!');
+
+/**
+ * Lightbox Modal for Screenshots
+ */
+function initLightbox() {
+    const screenshots = document.querySelectorAll('.screenshot');
+    
+    if (screenshots.length === 0) return;
+    
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+        <div class="lightbox-caption"></div>
+    `;
+    document.body.appendChild(lightbox);
+    
+    const lightboxImg = lightbox.querySelector('.lightbox-content');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    
+    // Add click event to each screenshot
+    screenshots.forEach(screenshot => {
+        screenshot.addEventListener('click', () => {
+            const img = screenshot.querySelector('img');
+            const caption = screenshot.querySelector('span');
+            
+            if (img) {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt || '';
+                lightboxCaption.textContent = caption ? caption.textContent : '';
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    // Close lightbox on close button click
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Close lightbox on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close lightbox on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
 
