@@ -449,6 +449,10 @@ section {
     border-radius: var(--border-radius);
 }
 
+.featured-project + .featured-project {
+    margin-top: 3rem;
+}
+
 .project-info h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
@@ -859,4 +863,3 @@ section {
         font-size: 1.25rem;
     }
 }
-
