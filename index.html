@@ -7,21 +7,21 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snowden0332.github.io/portfolio/">
+    <meta property="og:url" content="https://owenndeule.github.io/portfolio/">
     <meta property="og:title" content="Snowden | C# / ASP.NET Developer">
     <meta property="og:description" content="Backend Developer building reliable systems with C# and .NET. Co-creator of Topmax Malawi CMS.">
-    <meta property="og:image" content="https://snowden0332.github.io/portfolio/images/social-preview.png">
-    <meta property="og:image:secure_url" content="https://snowden0332.github.io/portfolio/images/social-preview.png">
+    <meta property="og:image" content="https://owenndeule.github.io/portfolio/images/social-preview.png">
+    <meta property="og:image:secure_url" content="https://owenndeule.github.io/portfolio/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://snowden0332.github.io/portfolio/">
+    <meta property="twitter:url" content="https://owenndeule.github.io/portfolio/">
     <meta property="twitter:title" content="Snowden | C# / ASP.NET Developer">
     <meta property="twitter:description" content="Backend Developer building reliable systems with C# and .NET. Co-creator of Topmax Malawi CMS.">
-    <meta property="twitter:image" content="https://snowden0332.github.io/portfolio/images/social-preview.png">
+    <meta property="twitter:image" content="https://owenndeule.github.io/portfolio/images/social-preview.png">
 
     <title>Snowden | C# / ASP.NET Developer</title>
     <link rel="stylesheet" href="style.css">
@@ -64,7 +64,7 @@
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
                 <div class="hero-social">
-                    <a href="https://github.com/Snowden0332" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/owenndeule" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="mailto:owenndeule2005@gmail.com" aria-label="Email" >
@@ -144,10 +144,10 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Database</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">Database Design</span>
                         <span class="skill-tag">Entity Framework</span>
-                        <span class="skill-tag">T-SQL</span>
+                        <span class="skill-tag">SQL</span>
                     </div>
                 </div>
                 
@@ -172,7 +172,7 @@
                 <span>Blazor</span>
                 <span>HTML</span>
                 <span>CSS</span>
-                <span>SQL Server</span>
+                <span>MySQL</span>
                 <span>Git</span>
                 <span>Linux</span>
             </div>
@@ -204,12 +204,12 @@
                         <span>ASP.NET Core</span>
                         <span>HTML</span>
                         <span>CSS</span>
-                        <span>SQL Server</span>
+                        <span>My</span>
                     </div>
                     
                     <div class="project-links">
                         <a href="https://topmaxmalawi.com" class="btn btn-primary" target="_blank" ><i class="fas fa-external-link-alt" ></i> View Project</a>
-                        <a href="https://github.com/Snowden0332" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com/owenndeule" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
                 <div class="project-screenshots">
@@ -291,11 +291,11 @@
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-github"></i>
-                            <a href="https://github.com/Snowden0332" target="_blank">github.com/Snowden0332</a>
+                            <a href="https://github.com/owenndeule" target="_blank">github.com/owenndeule</a>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/Snowden0332" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/owenndeule" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="mailto:owenndeule2005@gmail.com" aria-label="Email" >
@@ -314,10 +314,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Snowden. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> 2026 Snowden. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
 </body>
 </html>
